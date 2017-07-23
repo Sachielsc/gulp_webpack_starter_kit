@@ -1,0 +1,39 @@
+{
+    "name": "Meet_Aaron",
+    "title": "Meet_Aaron website",
+    "version": "1.0.0",
+    "description": "Aaron Zhou's personal website",
+    "year": "2017",
+    "main": "gulpfile.js",
+    "dependencies": {
+      "gulp": "^3.9.1"
+    },
+    "devDependencies": {
+        "browser-sync": "^2.12.10",
+        "gulp": "^3.9.1",
+        "gulp-autoprefixer": "^3.1.0",
+        "gulp-csslint": "^1.0.0",
+        "gulp-header": "^1.8.2",
+        "gulp-jshint": "^2.0.1",
+        "gulp-sass": "^3.1.0",
+        "gulp-sourcemaps": "^2.6.0",
+        "gulp-uglify": "^2.1.2",
+        "jshint": "^2.9.2",
+        "jshint-stylish": "^2.2.0",
+        "webpack": "^3.3.0",
+        "webpack-stream": "^3.2.0",
+        "gulp-babel": "^6.1.2",
+        "babel-preset-es2015": "^6.24.1",
+        "eslint": "4.3.0",
+        "scripts": {
+          "test": "echo \"Error: no test specified\" && exit 1"
+        },
+        "repository": {
+            "type": "git",
+            "url": "git+https://github.com/aaronleslie/Meet_Aaron.git"
+        },
+        "author": "Aaron Zhou <aaaron.chou@gmail.com>",
+        "license": "MIT",
+        "homepage": "http://aaronzhou.cc/"
+    }
+}
