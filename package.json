@@ -1,8 +1,8 @@
 {
-    "name": "Meet_Aaron",
-    "title": "Meet_Aaron website",
+    "name": "gulp_webpack_es6_starter",
+    "title": "gulp_webpack_es6_starter",
     "version": "1.0.0",
-    "description": "Aaron Zhou's personal website",
+    "description": "gulp_webpack_es6_starter",
     "year": "2017",
     "main": "gulpfile.js",
     "dependencies": {
