@@ -1,17 +1,20 @@
-// Loading modules
-const gulp            = require('gulp'),
-      webpack         = require('webpack'),
-      webpack_stream = require('webpack-stream'),
-      webpack_config = require('./webpack.config.babel.js'),
-      autoprefixer    = require('gulp-autoprefixer'),
-      browserSync     = require('browser-sync').create(),
-      csslint         = require('gulp-csslint'),
-      header          = require('gulp-header'),
-      jshint          = require('gulp-jshint'),
-      pkg             = require('./package.json'),
-      sass            = require('gulp-sass'),
-      sourcemaps      = require('gulp-sourcemaps'),
-      uglify          = require('gulp-uglify');
+'use strict';
+
+/ Loading modules
+import gulp from 'gulp';
+import webpack from 'webpack';
+import webpackStream from 'webpack-stream';
+import autoprefixer from 'gulp-autoprefixer';
+import browserSync from 'browser-sync';
+import csslint from 'gulp-csslint';
+import header from 'gulp-header';
+import jshint from 'gulp-jshint';
+import sass from 'gulp-sass';
+import sourcemaps from 'gulp-sourcemaps';
+import uglify from 'gulp-uglify';
+
+const webpack_config  = require('./webpack.config.babel.js'),
+      pkg             = require('./package.json');
 
 // App config
 var themeDir = 'themes/intercity/',
@@ -112,7 +115,6 @@ gulp.task('sass', () => {
 
 // Lint JavaScript files, minify it & reload browsers
 gulp.task('js', () => {
-
     return gulp.src(app.path.jsApp)
         .pipe(jshint(jshintOptions))
         .pipe(jshint.reporter('jshint-stylish', {beep: true}))
@@ -124,7 +126,6 @@ gulp.task('js', () => {
 
 // Static Server + watching files
 gulp.task('serve', ['sass', 'js'], () => {
-
     browserSync.init({
         server: {
             baseDir: app.path.theme,
@@ -132,7 +133,6 @@ gulp.task('serve', ['sass', 'js'], () => {
         }
         //notify: false
     });
-
     gulp.watch(app.path.sassFiles, ['sass']);
     gulp.watch(app.path.jsSrcFiles, ['js']);
     gulp.watch(app.path.htmlFiles).on('change', browserSync.reload);
