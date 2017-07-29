@@ -1,6 +1,6 @@
 'use strict';
 
-/ Loading modules
+// Loading modules
 import gulp from 'gulp';
 import webpack from 'webpack';
 import webpackStream from 'webpack-stream';
@@ -17,22 +17,21 @@ const webpack_config  = require('./webpack.config.babel.js'),
       pkg             = require('./package.json');
 
 // App config
-var themeDir = 'themes/intercity/',
-    
+let assetsDir = 'app/assets/',
+    srcDir    = 'app/src/',
     app = {
-
         path: {
-            theme       : themeDir,
-            srcDir      : themeDir + 'src',
-            cssDir      : themeDir + 'css',
-            jsDir       : themeDir + 'js',
-            jsSrcDir    : themeDir + 'src/js',
-            jsApp       : themeDir + 'src/js/app.js',
+            appDir      : mainDir,
+            srcDir      : appDir + 'src',
+            cssDir      : appDir + 'css',
+            jsDir       : appDir + 'js',
+            jsSrcDir    : appDir + 'src/js',
+            jsApp       : appDir + 'src/js/app.js',
             
             sassFiles   : [
                 themeDir + 'src/sass/**/*.scss'
             ],
-            
+            \
             jsSrcFiles  : [
                 themeDir + 'src/js/**/*.js'
             ],
