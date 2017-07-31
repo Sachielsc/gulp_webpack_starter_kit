@@ -4,6 +4,7 @@
 import gulp from 'gulp';
 import webpack from 'webpack';
 import webpackStream from 'webpack-stream';
+import WebpackDevServer from 'webpack-dev-server';
 import autoprefixer from 'gulp-autoprefixer';
 import browserSync from 'browser-sync';
 import csslint from 'gulp-csslint';
@@ -12,24 +13,23 @@ import jshint from 'gulp-jshint';
 import sass from 'gulp-sass';
 import sourcemaps from 'gulp-sourcemaps';
 import uglify from 'gulp-uglify';
-
-const webpack_config  = require('./webpack.config.babel.js'),
-      pkg             = require('./package.json');
+import webpackConfig from './webpack.config.babel';
+const  pkg = require('./package.json');
 
 // App config
 let assetsDir = 'app/assets/',
     srcDir    = 'app/src/',
+    htmlDir   = 'app/public/',
     app = {
         path: {
-            appDir      : mainDir,
-            srcDir      : appDir + 'src',
-            cssDir      : appDir + 'css',
-            jsDir       : appDir + 'js',
-            jsSrcDir    : appDir + 'src/js',
-            jsApp       : appDir + 'src/js/app.js',
+            srcDir      : srcDir,
+            sassDir     : srcDir + 'sass',
+            jsApp       : srcDir + 'js',
+            cssDir      : assetsDir + 'css',
+            jsDir       : assetsDir + 'js',
             
             sassFiles   : [
-                themeDir + 'src/sass/**/*.scss'
+                srcDir + 'src/sass/**/*.scss'
             ],
             \
             jsSrcFiles  : [
@@ -37,7 +37,7 @@ let assetsDir = 'app/assets/',
             ],
             
             htmlFiles   : [
-                themeDir + '_static/**/*.html'
+                htmlDir + '**/*.html'
             ]
         },
         
