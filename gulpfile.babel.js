@@ -12,32 +12,34 @@ import header from 'gulp-header';
 import jshint from 'gulp-jshint';
 import sass from 'gulp-sass';
 import sourcemaps from 'gulp-sourcemaps';
+import babel from 'gulp-babel';
 import uglify from 'gulp-uglify';
 import webpackConfig from './webpack.config.babel';
 const  pkg = require('./package.json');
 
 // App config
-let assetsDir = 'app/assets/',
-    srcDir    = 'app/src/',
-    htmlDir   = 'app/public/',
+let assetsDir = './assets/',
+    binDir    = './bin/',
+    htmlDir   = './src/html/',
+    srcDir    = './src/',
     app = {
         path: {
             srcDir      : srcDir,
-            sassDir     : srcDir + 'sass',
+            sassDir     : srcDir + 'style',
             jsApp       : srcDir + 'js',
-            cssDir      : assetsDir + 'css',
-            jsDir       : assetsDir + 'js',
+            cssDist     : binDir + 'css',
+            jsDist      : binDir + 'js',
             
             sassFiles   : [
-                srcDir + 'src/sass/**/*.scss'
+                srcDir + 'style/**/*.scss'
             ],
-            \
+
             jsSrcFiles  : [
-                themeDir + 'src/js/**/*.js'
+                srcDir + 'js/**/*.js'
             ],
             
             htmlFiles   : [
-                htmlDir + '**/*.html'
+                srcDir + 'html/**/*.html'
             ]
         },
         
@@ -85,18 +87,6 @@ let assetsDir = 'app/assets/',
         'zero-units'                    : true
     },
 
-    jshintOptions = {
-        'curly'     : true,
-        'eqeqeq'    : true,
-        'noempty'   : true,
-        'newcap'    : true,
-        'nonew'     : true,
-        'strict'    : true,
-        'camelcase' : true,
-        'quotmark'  : 'single',
-        'unused'    : false,        // Set this to 'true' when developing
-        'jquery'    : true
-    };
 
 // Compile sass into CSS, add vendor prefixes, lint it & auto-inject into browsers
 gulp.task('sass', () => {
