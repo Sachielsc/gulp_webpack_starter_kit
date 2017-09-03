@@ -51,6 +51,10 @@ let assetsDir = './assets/',
         ''].join('\n')
     },
 
+    jshintOptions = {
+        lookup : true
+    },
+
     csslintOptions = {
         'adjoining-classes'             : false,
         'box-model'                     : false,
