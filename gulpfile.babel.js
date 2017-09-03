@@ -84,7 +84,7 @@ let assetsDir = './assets/',
         'unqualified-attributes'        : false,
         'vendor-prefix'                 : false,
         'zero-units'                    : true
-    },
+    };
 
 
 // Compile sass into CSS, add vendor prefixes, lint it & auto-inject into browsers
