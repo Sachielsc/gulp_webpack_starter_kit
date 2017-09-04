@@ -97,7 +97,7 @@ gulp.task('sass', () => {
         .pipe(csslint.formatter())
         .pipe(header(app.banner, {pkg: pkg}))
         .pipe(sourcemaps.write('./'))
-        .pipe(gulp.dest(app.path.cssDir))
+        .pipe(gulp.dest(app.path.cssDist))
         .pipe(browserSync.stream({match: '**/*.css'}));
 });
 
