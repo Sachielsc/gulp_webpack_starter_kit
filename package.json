@@ -4,8 +4,7 @@
     "version": "1.0.0",
     "description": "gulp_webpack_es6_starter",
     "homepage": [
-        "http://aaronzhou.cc/Meet_Aaron",
-        "https://charles-alienworld.herokuapp.com/about/statepanel"
+        "http://aaronzhou.cc/Meet_Aaron"
     ],
     "year": "2017",
     "main": "gulpfile.bable.js",
