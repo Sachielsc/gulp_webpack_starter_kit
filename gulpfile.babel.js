@@ -44,7 +44,7 @@ let assetsDir = './assets/',
         
         banner: ['/**',
             ' * <%= pkg.title %> v<%= pkg.version %>',
-            ' * <%= pkg.homepage %>',
+            ' * <%= pkg.homepage[0] %>',
             ' * Copyright (c) <%= pkg.year %> - <%= pkg.author %>',
             ' * <%= pkg.license %> License',
             ' */',
