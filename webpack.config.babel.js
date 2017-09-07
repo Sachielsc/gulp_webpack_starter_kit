@@ -2,17 +2,19 @@ module.exports = {
     entry: './main-test.js',
 
     module: {
-        loaders: [
+        rules: [
+            {
+                enforce: "pre",
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: "eslint-loader",
+            },
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                loader: 'babel-loader',
-                query: {
-                    presets: ['es2015']
-                }
-            }
+                loader: "babel-loader",
+            },
         ],
-
     },
 
     output: {
