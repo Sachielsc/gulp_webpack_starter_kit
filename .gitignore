@@ -1,1 +1,3 @@
 node_modules
+.idea/
+gulp_webpack_starter_kit.iml
