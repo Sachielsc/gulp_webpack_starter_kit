@@ -44,7 +44,7 @@ let assetsDir = './assets/',
         
         banner: ['/**',
             ' * <%= pkg.title %> v<%= pkg.version %>',
-            ' * <%= pkg.homepage[0] %>',
+            ' * <%= pkg.homepage %>',
             ' * Copyright (c) <%= pkg.year %> - <%= pkg.author %>',
             ' * <%= pkg.license %> License',
             ' */',
@@ -86,29 +86,7 @@ let assetsDir = './assets/',
         'zero-units'                    : true
     },
 
-    jshintOptions = {
-        "node": true,
-        "browser": true,
-        "es5": true,
-        "esnext": true,
-        "bitwise": true,
-        "camelcase": true,
-        "curly": true,
-        "eqeqeq": true,
-        "immed": true,
-        "indent": 4,
-        "latedef": true,
-        "newcap": true,
-        "noarg": true,
-        "quotmark": "single",
-        "regexp": true,
-        "undef": true,
-        "unused": true,
-        "strict": true,
-        "trailing": true,
-        "smarttabs": true
-    };
-    
+
 // Compile sass into CSS, add vendor prefixes, lint it & auto-inject into browsers
 gulp.task('sass', () => {
     return gulp.src(app.path.sassFiles)
@@ -119,7 +97,7 @@ gulp.task('sass', () => {
         .pipe(csslint.formatter())
         .pipe(header(app.banner, {pkg: pkg}))
         .pipe(sourcemaps.write('./'))
-        .pipe(gulp.dest(app.path.cssDist))
+        .pipe(gulp.dest(app.path.cssDir))
         .pipe(browserSync.stream({match: '**/*.css'}));
 });
 
@@ -130,7 +108,7 @@ gulp.task('js', () => {
         .pipe(jshint.reporter('jshint-stylish', {beep: true}))
         .pipe(uglify())
         .pipe(header(app.banner, {pkg: pkg}))
-        .pipe(gulp.dest(app.path.jsDist))
+        .pipe(gulp.dest(app.path.jsDir))
         .pipe(browserSync.stream());
 });
 
