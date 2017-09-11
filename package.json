@@ -3,15 +3,13 @@
   "title": "gulp_webpack_es6_starter",
   "version": "1.0.0",
   "description": "gulp_webpack_es6_starter",
-  "homepage": [
-    "http://aaronzhou.cc/Meet_Aaron",
-    "https://charles-alienworld.herokuapp.com/about/statepanel"
-  ],
+  "homepage": "http://aaronzhou.cc",
   "year": "2017",
   "main": "gulpfile.bable.js",
   "dependencies": {
     "gulp": "^3.9.1"
   },
+  "homepage": "http://aaronzhou.cc/Meet_Aaron",
   "keywords": [
     "gulp",
     "es6",
@@ -19,35 +17,28 @@
     "webpack"
   ],
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-es2015": "^6.24.1",
     "browser-sync": "^2.12.10",
     "eslint": "^4.3.0",
-    "eslint-config-airbnb-base": "^12.0.0",
-    "eslint-loader": "^1.9.0",
-    "eslint-plugin-import": "^2.7.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-babel": "^6.1.2",
     "gulp-csslint": "^1.0.0",
     "gulp-header": "^1.8.2",
-    "gulp-jshint": "^2.0.4",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.0",
     "gulp-uglify": "^2.1.2",
-    "jshint": "^2.9.5",
-    "jshint-stylish": "^2.2.1",
     "webpack": "^3.3.0",
-    "webpack-dev-server": "^2.7.1",
-    "webpack-stream": "^3.2.0"
+    "webpack-stream": "^3.2.0",
+    "gulp-babel": "^6.1.2",
+    "babel-core": "^6.25.0",
+    "babel-preset-es2015": "^6.24.1"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/aaronleslie/Meet_Aaron.git"
+      "type": "git",
+      "url": "git+https://github.com/aaronleslie/Meet_Aaron.git"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+      "test": "echo \"Error: no test specified\" && exit 1"
   },
   "babel": {
     "presets": [
