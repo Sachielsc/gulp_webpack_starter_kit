@@ -7,17 +7,24 @@ module.exports = {
                 enforce: "pre",
                 test: /\.js$/,
                 exclude: /node_modules/,
-                loader: "eslint-loader",
+                loader: "eslint-loader"
             },
             {
                 test: /\.js$/,
-                exclude: /node_modules/,
-                loader: "babel-loader",
-            },
-        ],
+                use: {
+                    loader: "babel-loader",
+                    options: {
+                        presets: [
+                            "es2015"
+                        ]
+                    }
+                },
+                exclude: /node_modules/
+            }
+        ]
     },
 
     output: {
         filename: './bundle.js'
-    },
+    }
 };

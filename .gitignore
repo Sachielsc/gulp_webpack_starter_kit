@@ -1,5 +1,13 @@
-node_modules
-.idea/
-gulp_webpack_starter_kit.iml
+# webpack bundles
 bundle.js
+
+# dependencies
+/node_modules
+
+# IDEs and editors
+/.idea
+*.sublime-workspace
+gulp_webpack_starter_kit.iml
+
+# misc
 package-lock.json
